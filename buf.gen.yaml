@@ -5,7 +5,7 @@ managed:
   override:
     - file_option: go_package_prefix
       module: buf.build/xhos/null-protos
-      value: null-mcp/internal/gen
+      value: github.com/xhos/null-mcp/internal/gen
 
 inputs:
   - directory: proto

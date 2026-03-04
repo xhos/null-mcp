@@ -8,8 +8,8 @@ import (
 	connect "connectrpc.com/connect"
 	context "context"
 	errors "errors"
+	v1 "github.com/xhos/null-mcp/internal/gen/null/v1"
 	http "net/http"
-	v1 "null-mcp/internal/gen/null/v1"
 	strings "strings"
 )
 
