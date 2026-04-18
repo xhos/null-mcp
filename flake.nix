@@ -57,6 +57,7 @@
         packages = with pkgs; [
           go
           golangci-lint
+          air
 
           buf
           protoc-gen-go
@@ -64,7 +65,7 @@
           protoc-gen-connect-go
 
           (writeShellScriptBin "run" ''
-            go run ./cmd/main.go
+            exec ${air}/bin/air -build.cmd "go build -o ./tmp/main ./cmd/main.go" -build.bin ./tmp/main
           '')
 
           (writeShellScriptBin "regen" ''
